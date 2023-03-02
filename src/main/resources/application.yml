@@ -1,0 +1,26 @@
+# 设置端口号
+server:
+  port: 80
+
+# Druid配置
+spring:
+  datasource:
+    druid:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      url: jdbc:mysql://localhost:3306/db2?serverTimezone=UTC
+      username: root
+      password: 123456
+
+# MyBatis-Plus配置
+# mybatis-plus:
+#  global-config:
+#    db-config:
+      # 由于使用了@TableName("tb_book"), 此配置舍弃
+#      table-prefix: tb_
+      # 数据库表中id设置为自增属性, 可以被@TableId(value=  , type= idType.xxx )
+#      id-type: auto
+
+# 开启MP运行日志
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
